@@ -1,0 +1,22 @@
+<div>
+  <div class="mb-3">
+    <p>Enter the Owner name and Repository Name to get the details of Issues.</p>
+  </div>
+  <form [formGroup]="form">
+    <div class="control">
+      <input placeholder="Owner" formControlName="owner" required/>
+      <span class="error" *ngIf="form.controls['owner'].errors?.required && (form.controls['owner']?.dirty || form.controls['owner']?.touched)">
+        Owner's username is required
+      </span>
+    </div>
+    <div class="control">
+      <input placeholder="Repository Name" formControlName="repo" required/>
+      <span class="error" *ngIf="form.controls['repo'].errors?.required && (form.controls['repo']?.dirty || form.controls['repo']?.touched)">
+          Repository name is required
+      </span>
+    </div>
+   <div class="text-right">
+    <button (click)="submit(form.value)" type="submit" class="btn submit-btn" [disabled]="form.invalid">Submit</button>
+   </div>
+  </form>
+</div>

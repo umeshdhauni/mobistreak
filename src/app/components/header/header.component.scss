@@ -1,0 +1,35 @@
+.navbar-nav{
+    flex-direction: row !important;
+    li a{
+        padding-right: .5rem;
+        padding-left: .5rem;
+        cursor: pointer;
+        color: white;
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    .active{
+        a{
+            background: white;
+    border-radius: 30px;
+    color: #3993f7;
+    // margin-top: 2px
+        }
+    }
+}
+
+li:focus{
+    border:none;
+    box-shadow: none;
+    outline: none;
+}
+
+.logo{
+    flex:1;
+    color:white !important
+}
+
+.navbar{
+    // background-image: linear-gradient(to right, #CC245A, #D94E3D);
+    background-image: linear-gradient(to right, #0376f1,#51a3fb);
+}

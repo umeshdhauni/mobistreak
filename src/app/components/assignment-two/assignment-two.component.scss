@@ -1,0 +1,41 @@
+.form-result{
+    max-width: 580px;
+}
+
+.display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link{
+    color:#0376f1;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.whole-container{
+    display: flex;
+    margin-top: 4%;
+    justify-content: center;
+}
+
+.result-div{
+    width: 100%;
+}
+
+.toast{
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    left:15px
+}
+
+.err-show{
+    opacity: 1;
+    background: white;
+}
+
+.toast-header img{
+    width: 22px;
+}

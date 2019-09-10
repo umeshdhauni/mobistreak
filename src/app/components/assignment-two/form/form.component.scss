@@ -1,0 +1,31 @@
+.control{
+    input{
+        padding: 10px 20px;
+        border: 1px solid #ececec;
+        border-radius: 6px;
+        width: 100%;
+    }
+    margin-bottom: 25px;
+
+}
+
+.control input:focus{
+    // box-shadow: none;
+    // border:none;
+    outline: none;
+}
+
+.submit-btn{
+    border-radius: 30px;
+    // background-image: linear-gradient(to right, #CC245A, #D94E3D);
+    background-image: linear-gradient(to right, #0376f1,#51a3fb);
+    color: white;
+    padding: 7px 28px;
+}
+
+.error{
+    font-size: 11px;
+    margin: 5px;
+    color: red;
+    transition: 0.5s;
+}

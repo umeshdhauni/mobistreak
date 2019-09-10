@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin-bottom: 5px;
+}
+
+.padding{
+    padding:20px;
+}
+
+.my-card{
+//   background-color: #fff;
+//   background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  padding:30px
+}
+
+.custom-btn{
+    border-radius: 30px;
+    // background-image: linear-gradient(to right, #CC245A, #D94E3D);
+    background-image: linear-gradient(to right, #0376f1,#51a3fb);
+    color: white;
+    padding: 7px 28px;
+}

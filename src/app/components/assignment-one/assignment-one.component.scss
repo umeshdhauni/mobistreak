@@ -1,0 +1,25 @@
+.display-around{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 30px
+}
+
+.blue,.green,.red{
+    width: 15px;height: 15px;
+    border-radius: 100%;
+    margin: 0 30px;
+}
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
+.blue{
+    background: blue;
+}
+.note{
+    display: flex;
+    align-items: center;
+}
