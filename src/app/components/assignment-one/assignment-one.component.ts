@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { CommonService } from 'src/app/services/common/common.service';
 import * as d3 from 'd3';
 
-export class MarketPrice {
+export class ChartFormat {
   name: string;
   calls: number;
   Quallified: number;
@@ -63,6 +63,7 @@ export class AssignmentOneComponent implements OnInit {
   }
 
   buildChart() {
+    d3.select('svg').remove();
     let element = this.chartElement.nativeElement;
     this.chartProps = {};
 
@@ -88,7 +89,7 @@ export class AssignmentOneComponent implements OnInit {
     let _this = this;
 
 
-    var valueline = d3.line<MarketPrice>()
+    var valueline = d3.line<ChartFormat>()
       .x(function (d) {
         return _this.chartProps.x(d.name);
 
@@ -96,14 +97,14 @@ export class AssignmentOneComponent implements OnInit {
       .y(function (d) { console.log('Close market'); return _this.chartProps.y(d.calls); });
 
 
-      var valueline2 = d3.line<MarketPrice>()
+      var valueline2 = d3.line<ChartFormat>()
       .x(function (d) {
         return _this.chartProps.x(d.name);
 
       })
       .y(function (d) { console.log('Open market'); return _this.chartProps.y(d.Quallified); });
 
-    var valueline3 = d3.line<MarketPrice>()
+    var valueline3 = d3.line<ChartFormat>()
       .x(function (d) {
         return _this.chartProps.x(d.name);
 
@@ -114,6 +115,7 @@ export class AssignmentOneComponent implements OnInit {
       .append('svg')
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
+      .attr("preserveAspectRatio", "xMinYMin meet")
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
@@ -163,6 +165,10 @@ export class AssignmentOneComponent implements OnInit {
     this.chartProps.xAxis = xAxis;
     this.chartProps.yAxis = yAxis;
     
+  }
+
+  onResize() {
+    this.buildChart();
   }
 }
 
